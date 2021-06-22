@@ -1,0 +1,15 @@
+{{define "content"}}
+  <main class="px-3">
+    <h1>Home page</h1>
+      <h2>News</h2>
+      {{range .}}
+        <div class="alert alert-danger">
+          <h2>{{.Title}}</h2>
+          <p>{{.Brief}}</p>
+          <a href="/post/{{.ID}}" class="btn btn-danger">Read more...</a>
+        </div>
+      {{else}}
+        <p class="lead">No articles</p>
+      {{end}}
+  </main>
+{{end}}

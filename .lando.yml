@@ -1,0 +1,10 @@
+name: go-training
+
+services:
+  db:
+    type: mariadb:10.5
+    portforward: 3306
+    creds:
+      user: mariadb
+      password: mariadb
+      database: database
